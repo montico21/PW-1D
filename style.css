@@ -32,8 +32,8 @@ nav.principal{
 }
 
 a.aLogo{
-    position: relative;
-    right: 775px;
+    position: absolute;
+    left: 2vw;
 }
 
 a.button{
