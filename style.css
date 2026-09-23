@@ -1,0 +1,43 @@
+:root{
+    --red: #CD0711;
+    --white: #FBF6EC;
+    --orange: #F8A426;
+    --black: #333;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: var(--black);
+}
+
+img.logo{
+    width: 50px;
+}
+
+nav.principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--red);
+    gap: 50px;
+    margin: 7px;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+a.aLogo{
+    position: relative;
+    right: 775px;
+}
+
+a.button{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+}
