@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <!-- ERRO 01: Tag <meta> sem o sinal de fechamento '>' -->
-  <meta charset="UTF-8"
+  <meta charset="UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -13,17 +13,17 @@
   <style>
     body { font-family: Arial, sans-serif; }
     /* ERRO 04: CSS com sintaxe errada (faltou o ponto de classe ou '#' e usou ':' em vez de '{') */
-    card-box : 
+    .card-box { 
       border: 1px solid red;
     }
 </head>
 
 <!-- ERRO 05: Atributo do body escrito errado ("backgroundcolor" sem hífen) -->
 <!-- ERRO 06: Tag <body> com duas aspas abrindo no estilo inline -->
-<body style=""margin: 0; backgroundcolor: #f0f0f0;">
+<body style="margin: 0; backgroundcolor: #f0f0f0;">
 
   <!-- ERRO 07: Tag de abertura do header com erro de digitação (<hedar>) -->
-  <hedar style="background-color: #0056b3; color: white; padding: 20px;">
+  <header style="background-color: #0056b3; color: white; padding: 20px;">
     
     <!-- ERRO 08: Uso de tag <h1> duplicada no mesmo cabeçalho sem necessidade hierárquica -->
     <h1>Portal Principal</h1>
@@ -35,7 +35,7 @@
       <!-- ERRO 10: Link sem o atributo href -->
       <a>Sobre</a> | 
       <!-- ERRO 11: Atributo href com escrita errada ("herf") -->
-      <a herf="#contato">Contato</a>
+      <a href="#contato">Contato</a>
     <nav>
 
   </header>
@@ -51,27 +51,25 @@
     <section>
       
       <!-- ERRO 14: Salto de hierarquia de títulos (foi de h2 direto para h5) -->
-      <h5>Instruções do Exercício</h5>
+      <h3>Instruções do Exercício</h3>
 
       <!-- ERRO 15: Tag <p> não fechada antes de abrir outra tag de bloco -->
       <p>Sua missão é encontrar todos os erros deste arquivo e enviar a correção via Pull Request.
       
-      <!-- ERRO 16: Elemento <div> dentro de um parágrafo <p> (inválido no HTML) -->
-      <p>
-        <div style="color: red;">Atenção: leia o código atentamente!</div>
-      </p>
+        <div style="color: red;"><p>Atenção: leia o código atentamente!</p> </div>
+      
 
       <p style="color=blue;">Dica: confira o CSS inline e as tags HTML!</p>
 
       <!-- ERRO 18: Imagem sem o atributo 'alt' obrigatório (acessibilidade) -->
       <!-- ERRO 19: Caminho da imagem com barra invertida estilo Windows em vez de barra normal -->
-      <img src="images\logo.png" width="200" height="100">
+      <img src="images\logo.png" width="200" alt="logo da empresa" height="100">
 
       <!-- ERRO 20: Imagem com atributo 'src' completamente em branco -->
       <img src="" alt="Imagem promocional">
 
     <!-- ERRO 21: Fechamento de tag inexistente </secion> -->
-    </secion>
+    </section>
 
     <section>
       <h3>Lista de Tarefas</h3>
@@ -86,7 +84,8 @@
 
       <!-- ERRO 24: Lista não ordenada <ul> contendo uma tag <p> direta sem ser filha de um <li> -->
       <ul>
-        <p>Regras do projeto:</p>
+    <li>
+        <p>Regras do projeto:</p> </li>
         <li>Trabalhar em equipe</li>
         <!-- ERRO 25: Atributo 'style' dentro do <li> sem o sinal de igual (style"color:green;") -->
         <li style"color: green;">Manter o código limpo</li>
@@ -99,8 +98,10 @@
       <!-- ERRO 26: Formulário sem o atributo 'action' ou 'method' -->
       <form>
         
-        <!-- ERRO 27: Elemento <label> com o atributo 'for' apontando para um ID inexistente -->
+        <!-- ERRO 27: Elemento <label> com o atributo 'for' apontando para um ID inexistente --> 
+        <!-- arrumei o erro-->
         <label for="nome-usuario">Nome Completo:</label>
+        <input type="text" id="nome-usuario" name="nome-usuario">
         <!-- ERRO 28: Input com 'id' diferente do 'for' do label e sem o atributo 'type' -->
         <input id="nome" name="nome">
         <br>
@@ -124,7 +125,7 @@
 
         <!-- ERRO 32: Botão criado com tag fictícia <btn> -->
         <!-- ERRO 33: Atributo 'onclick' com função CSS em vez de JavaScript -->
-        <btn onclick="background-color: red;">Enviar Dados</btn>
+        <button onclick="background-color: red;">Enviar Dados</button>
 
       </form>
     </section>
@@ -135,17 +136,22 @@
       <!-- ERRO 34: Tabela sem a tag <tbody> ou <thead> básica, misturando linhas soltas -->
       <table>
         <!-- ERRO 35: Célula de cabeçalho <th> usada diretamente dentro da <table> sem uma linha <tr> -->
+        <!-- ERRO CORRIGIDO -->
+        
+         <tr>
         <th>Aluno</th>
         <th>Pontos</th>
-
+        </tr>
+         
         <tr>
           <td>João Silva</td>
-          <!-- ERRO 36: Célula de tabela <td> fechada com <th> -->
-          <td>85</th>
+          <!-- ERRO 36: Célula de tabela <td> fechada com <th>; resolvido -->
+          <td>85</td>
         </tr>
         <tr>
           <!-- ERRO 37: Linha da tabela com número de colunas inconsistente (apenas 1 <td> em vez de 2) -->
-          <td>Maria Souza</td>
+    <td>Maria Souza</td>
+    <tr>Segundo Dado</tr>
         </tr>
       <!-- ERRO 38: Tabela fechada com a tag de formulário </form> -->
       </form>
